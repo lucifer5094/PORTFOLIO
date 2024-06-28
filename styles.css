@@ -109,3 +109,24 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+/* Basic image styling */
+img {
+    width: 300px; /* Ensure the image does not overflow its container */
+    height: auto; /* Maintain aspect ratio */
+    display: flexbox; /* Remove bottom whitespace in some browsers */
+    margin: 0 auto; /* Center align the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Add a hover effect */
+  img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Add a class for a circular image */
+  .img-circle {
+    border-radius: 50%; /* Make the image circular */
+  }

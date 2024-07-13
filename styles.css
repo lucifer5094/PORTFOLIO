@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added for consistent box sizing */
-    overflow-x: hidden; /* Added to prevent horizontal scrolling */
+    box-sizing: border-box;
+    overflow-x: hidden;
     text-align: center;
     background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(18, 142, 146));
 }
@@ -109,17 +109,19 @@ footer {
 
 /* Image Styles */
 img {
-    width: 100%; /* Changed from 200px to 100% for responsiveness */
+    width: 200px; /* Set specific width for images */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove bottom whitespace in some browsers */
     margin: 0 auto; /* Center align the image */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    will-change: transform; /* Optimization for smoother animations */
 }
 
 img:hover {
     transform: scale(1.1); /* Slightly enlarge the image */
-    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .img-circle {
@@ -186,55 +188,64 @@ a {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) { /* Added media query */
+@media (max-width: 1200px) {
     nav ul {
-        flex-direction: column; /* Adjust navigation layout */
+        flex-direction: column;
     }
 
     section {
-        padding: 2rem 1rem; /* Adjust section padding */
+        padding: 2rem 1rem;
     }
 
     .contact-buttons {
         flex-direction: row;
-        flex-wrap: wrap; /* Adjust contact buttons layout */
+        flex-wrap: wrap;
     }
 }
 
-@media (max-width: 768px) { /* Added media query */
+@media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Adjust navigation layout */
-        align-items: center; /* Center navigation items */
+        flex-direction: column;
+        align-items: center;
     }
 
     section {
-        padding: 2rem 1rem; /* Adjust section padding */
+        padding: 2rem 1rem;
     }
 
     .contact-btn {
-        width: 100%; /* Make contact buttons full width */
-        margin-bottom: 10px; /* Add margin between buttons */
+        width: 100%;
+        margin-bottom: 10px;
     }
 
-    img {
-        width: 100%; /* Ensure images are responsive */
+    .education, .social {
+        margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 480px) { /* Added media query */
+@media (max-width: 480px) {
     nav ul li {
-        margin: 0.5rem 0; /* Adjust navigation item margins */
+        margin: 0.5rem 0;
     }
 
     .contact-buttons {
-        flex-direction: column; /* Stack contact buttons vertically */
+        flex-direction: column;
     }
 
     .contact-btn {
-        width: 100%; /* Make contact buttons full width */
+        width: 100%;
     }
 
     img {
-        width: 100%; /* Ensure images are responsive */
+        width: 100%; /* Make images responsive within their container */
+    }
+
+    .education, .social {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem 0;
     }
 }

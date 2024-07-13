@@ -1,20 +1,22 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    box-sizing: border-box; /* Added for consistent box sizing */
+    overflow-x: hidden; /* Added to prevent horizontal scrolling */
     text-align: center;
-    background-image: linear-gradient(90deg, rgb(255, 255, 255),rgb(18, 142, 146));
-    
+    background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(18, 142, 146));
 }
 
+/* Header Styles */
 header {
     background: linear-gradient(90deg, #4b6cb7, #182848);
     color: #fff;
     padding: 1rem 0;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     display: flex;
@@ -48,16 +50,12 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Section Styles */
 section {
     padding: 4rem 2rem;
     text-align: center;
     transition: all 0.5s ease-in-out;
 }
-
-/* section#home {
-     background: #f4f4f4; 
-     background-image: linear-gradient(90deg, rgb(255, 255, 255),rgb(74, 198, 255)); */
-
 
 section#about,
 section#projects,
@@ -66,12 +64,9 @@ section#education,
 section#fun,
 section#gallery,
 section#social {
-
     border: 2px solid none;
     padding: auto;
     margin: auto;
-    /* background: #fff;
-    background-image: linear-gradient(90deg, rgb(255, 255, 255),rgb(74, 198, 255), rgb(255,255, 25)); */
     border: 1px solid auto;
 }
 
@@ -105,8 +100,6 @@ section#social {
     margin-bottom: 0.5rem;
 }
 
-
-
 footer {
     background: #333;
     color: #fff;
@@ -114,28 +107,25 @@ footer {
     padding: 1rem 0;
 }
 
-
-/* Basic image styling */
+/* Image Styles */
 img {
-    width: 200px; /* Ensure the image does not overflow its container */
+    width: 100%; /* Changed from 200px to 100% for responsiveness */
     height: auto; /* Maintain aspect ratio */
-    display: flexbox; /* Remove bottom whitespace in some browsers */
+    display: block; /* Remove bottom whitespace in some browsers */
     margin: 0 auto; /* Center align the image */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  }
-  
-  /* Add a hover effect */
-  img:hover {
+}
+
+img:hover {
     transform: scale(1.1); /* Slightly enlarge the image */
     transition: transform 0.3s ease; /* Smooth transition */
-  }
-  
-  /* Add a class for a circular image */
-  .img-circle {
+}
+
+.img-circle {
     border-radius: 50%; /* Make the image circular */
-  }
-  
+}
+
 a {
     text-decoration: none;
     border-radius: 3px;
@@ -144,12 +134,7 @@ a {
     font-size: 20px;
 }
 
-
-
-
-
-/* Contact */
-
+/* Contact Section */
 .contact-section {
     font-family: Arial, sans-serif;
     display: flex;
@@ -174,8 +159,15 @@ a {
     animation: floatIn 2s forwards;
 }
 
-.email-btn { background-color: #007bff; animation-delay: 0.2s; }
-.phone-btn { background-color: #28a745; animation-delay: 0.4s; }
+.email-btn {
+    background-color: #007bff;
+    animation-delay: 0.2s;
+}
+
+.phone-btn {
+    background-color: #28a745;
+    animation-delay: 0.4s;
+}
 
 .contact-btn:hover {
     transform: translateY(-5px);
@@ -193,3 +185,56 @@ a {
     }
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) { /* Added media query */
+    nav ul {
+        flex-direction: column; /* Adjust navigation layout */
+    }
+
+    section {
+        padding: 2rem 1rem; /* Adjust section padding */
+    }
+
+    .contact-buttons {
+        flex-direction: row;
+        flex-wrap: wrap; /* Adjust contact buttons layout */
+    }
+}
+
+@media (max-width: 768px) { /* Added media query */
+    nav ul {
+        flex-direction: column; /* Adjust navigation layout */
+        align-items: center; /* Center navigation items */
+    }
+
+    section {
+        padding: 2rem 1rem; /* Adjust section padding */
+    }
+
+    .contact-btn {
+        width: 100%; /* Make contact buttons full width */
+        margin-bottom: 10px; /* Add margin between buttons */
+    }
+
+    img {
+        width: 100%; /* Ensure images are responsive */
+    }
+}
+
+@media (max-width: 480px) { /* Added media query */
+    nav ul li {
+        margin: 0.5rem 0; /* Adjust navigation item margins */
+    }
+
+    .contact-buttons {
+        flex-direction: column; /* Stack contact buttons vertically */
+    }
+
+    .contact-btn {
+        width: 100%; /* Make contact buttons full width */
+    }
+
+    img {
+        width: 100%; /* Ensure images are responsive */
+    }
+}

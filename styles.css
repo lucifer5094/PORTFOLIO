@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif, 'Roboto';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -251,5 +251,77 @@ a {
 
     footer {
         padding: 0.5rem 0;
+    }
+}
+
+
+/*        Quotes and jokes                   */
+.container {
+    background-color: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-out;
+}
+
+.quote{
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+#randon-quote {
+    font-weight: 1.3em;
+    color: #666;
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease-in-out;
+    min-height: 50px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 20px rgba(0, 123, 255, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2);
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

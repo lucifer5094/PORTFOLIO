@@ -82,7 +82,8 @@ section#social {
 }
 
 .education,
-.social {
+.social,
+.project {
     margin-bottom: 2rem;
     border: 1px solid auto;
     padding: 1rem;
@@ -91,7 +92,8 @@ section#social {
 }
 
 .education:hover,
-.social:hover {
+.social:hover,
+.project:hover {
     transform: scale(1.05);
 }
 

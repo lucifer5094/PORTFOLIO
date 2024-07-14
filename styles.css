@@ -70,6 +70,21 @@ section#social {
     border: 1px solid auto;
 }
 
+.nav-text{
+    font-size: xx-larger;
+    color: #28a745;
+    animation: fade 3s ease-in-out infinite;
+}
+
+@keyframes fade{
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;

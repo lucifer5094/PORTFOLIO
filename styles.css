@@ -244,6 +244,7 @@ a {
 @media (max-width: 480px) {
     nav ul li {
         margin: 0.5rem 0;
+        padding: 2px;
     }
 
     .contact-buttons {

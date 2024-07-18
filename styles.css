@@ -213,7 +213,7 @@ a {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 769px) {
     section {
         padding: 2rem 1rem;
     }
@@ -224,7 +224,7 @@ a {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width:481px) {
     
 
     section {

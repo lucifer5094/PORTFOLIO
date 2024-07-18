@@ -214,10 +214,6 @@ a {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
-    nav ul {
-        flex-direction: column;
-    }
-
     section {
         padding: 2rem 1rem;
     }
@@ -229,10 +225,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+    
 
     section {
         padding: 2rem 1rem;
